@@ -1,0 +1,5 @@
+{
+  "name": "AI Virtual Try-On",
+  "description": "Upload your photo and an outfit image to see a virtual try-on. The AI keeps your face and hair, replaces your clothes with the new outfit, and generates a matching background.",
+  "requestFramePermissions": []
+}
