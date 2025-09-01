@@ -39,9 +39,10 @@ export const generateVirtualTryOnImage = async (userImageBase64: string, outfitI
     try {
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash-image-preview',
-            contents: {
-                parts: [userImagePart, outfitImagePart, textPart],
-            },
+            // Explicitly use an array for contents to match REST API structure and fix 400 error.
+            contents: [
+                { parts: [userImagePart, outfitImagePart, textPart] }
+            ],
             config: {
                 responseModalities: [Modality.IMAGE, Modality.TEXT],
             },

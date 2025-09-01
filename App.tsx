@@ -92,7 +92,6 @@ const App: React.FC = () => {
                                     >
                                         <SparklesIcon className="w-5 h-5 mr-2"/>
                                         {isLoading ? 'Generating Your Look...' : 'Virtually Try On'}
-                                    {/* FIX: Corrected the closing tag for the Button component. */}
                                     </Button>
                                  </div>
                                  {error && <p className="text-red-400 text-center mt-2">{error}</p>}
